@@ -2,9 +2,6 @@
  * @author Vladimir Chalupecky (vladimir.chalupecky@gmail.com)
  */
 
-#include <limits>
-
-#include <ObjectTypes/PolyLine/PolyLine.hh>
 #include <ObjectTypes/PolyhedralMesh/PolyhedralMesh.hh>
 #include <ObjectTypes/TriangleMesh/TriangleMesh.hh>
 #include <OpenFlipper/BasePlugin/PluginFunctions.hh>

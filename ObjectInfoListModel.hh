@@ -71,7 +71,7 @@ public:
 	void removeObject(int object_id)
 	{
 		bool found = false;
-		for (int i = 0; i < objects_.size(); ++i) {
+		for (unsigned int i = 0; i < objects_.size(); ++i) {
 			if (objects_[i].second == object_id) {
 				found = true;
 				break;
