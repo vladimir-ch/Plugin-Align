@@ -5,12 +5,12 @@
  */
 
 #include <set>
+#include <QObject>
 
 #include <OpenFlipper/BasePlugin/BackupInterface.hh>
 #include <OpenFlipper/BasePlugin/BaseInterface.hh>
 #include <OpenFlipper/BasePlugin/LoadSaveInterface.hh>
 #include <OpenFlipper/BasePlugin/LoggingInterface.hh>
-#include <OpenFlipper/BasePlugin/RPCInterface.hh>
 #include <OpenFlipper/BasePlugin/ToolboxInterface.hh>
 #include <OpenFlipper/common/Types.hh>
 
@@ -23,7 +23,6 @@ class AlignPlugin : public QObject,
 	BaseInterface,
 	LoadSaveInterface,
 	LoggingInterface,
-	RPCInterface,
 	ToolboxInterface
 {
 	Q_OBJECT
@@ -31,7 +30,6 @@ class AlignPlugin : public QObject,
 	Q_INTERFACES(BaseInterface)
 	Q_INTERFACES(LoadSaveInterface)
 	Q_INTERFACES(LoggingInterface)
-	Q_INTERFACES(RPCInterface)
 	Q_INTERFACES(ToolboxInterface)
 
 #if QT_VERSION >= 0x050000
@@ -68,6 +66,7 @@ private slots:
 
 private slots:
 	void slotAlignMeshes();
+
 	void slotSourceMeshChanged(int objectId);
 	void slotTargetMeshChanged(int objectId);
 
